@@ -1,15 +1,15 @@
 const notes = require("express").Router();
 const util = require("util");
+const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
-// const uuid = require("uuid");
 
 const readFromFile = util.promisify(fs.readFile);
 
-function uuid() {
-  Math.floor((1 + Math.random()) * 0x10000)
-    .toString(16)
-    .substring(1);
-}
+// function uuid() {
+//   Math.floor((1 + Math.random()) * 0x10000)
+//     .toString(16)
+//     .substring(1);
+// }
 
 const writeToFile = (destination, content) =>
   fs.writeFile(destination, JSON.stringify(content, null, 4), (error) =>
@@ -49,7 +49,7 @@ notes.post("/", (req, res) => {
     const newNote = {
       title,
       text,
-      id: uuid(),
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, "./db/db.json");

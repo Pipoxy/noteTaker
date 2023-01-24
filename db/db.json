@@ -6,12 +6,12 @@
     },
     {
         "title": "hello",
-        "text": "I like to make notes\n",
+        "text": "I like to make notes",
         "id": "17e00394-09b2-49f6-a84c-03ca4f93045e"
     },
     {
         "title": "oi",
-        "text": "new one\n",
+        "text": "new one",
         "id": "796dddaf-6438-4fd8-b96c-0645f4da2abd"
     },
     {
@@ -21,5 +21,10 @@
     {
         "title": "test2",
         "text": "test2"
+    },
+    {
+        "title": "note",
+        "text": "note",
+        "id": "cbcceaa4-3941-49e7-87f1-22d7d30152e2"
     }
 ]
